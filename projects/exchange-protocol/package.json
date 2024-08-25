@@ -1,0 +1,24 @@
+{
+  "name": "exchange-protocol",
+  "description": "Exchange contracts from Uniswap v2, and new features (zaps)",
+  "version": "2.0.0",
+  "license": "GPL-3.0/MIT",
+  "private": true,
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy:testnet": "npx hardhat run --network etherlinkTestnet scripts/deploy.ts",
+    "deploy:arbitrum-sepolia": "npx hardhat run --network arbitrumSepolia scripts/deploy.ts",
+    "deploy:mainnet": "npx hardhat run --network etherlink scripts/deploy.ts",
+    "test": "npx hardhat test",
+    "test:coverage": "npx hardhat coverage",
+    "test:size-contracts": "npx hardhat size-contracts",
+    "verify:testnet": "npx hardhat run --network etherlinkTestnet scripts/verify.ts",
+    "verify:arbitrum-sepolia": "npx hardhat run --network arbitrumSepolia scripts/verify.ts",
+    "verify:mainnet": "npx hardhat run --network etherlink scripts/verify.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-verify": "^2.0.5",
+    "@openzeppelin/contracts": "^4.2.0",
+    "@uniswap/lib": "4.0.1-alpha"
+  }
+}
